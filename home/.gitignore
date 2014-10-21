@@ -1,0 +1,20 @@
+# Tipicos
+*.diff
+*.err
+*.orig
+*.log
+*~
+
+# Folders to ignore
+.hg
+.svn
+
+# Node.js package manager
+/node_modules
+/npm-debug.log
+
+# Other stuff
+*.pyc
+/tmp
+
+# Project stuff

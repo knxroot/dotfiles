@@ -1,0 +1,54 @@
+[user]
+  name = Gustavo
+  email = gustavo@lacosox.org
+[github]
+  name = Gustavo
+  user = knxroot
+[alias]
+  st = status --short
+  ci = commit
+  d = diff
+
+  graph = log --graph
+  url = !git remote -v|sed "'s|.*git[:@]\\(.*\\).git.*|http://\\1|;s|m:|m/|'"|uniq|xargs open
+
+  changelog = !sh "$HOME/.lacosox_dotfiles/git-extras/git-changelog.sh"
+  cpush     = !sh "$HOME/.lacosox_dotfiles/git-extras/git-cpush.sh"
+  rstatus   = !zsh "$HOME/.lacosox_dotfiles/git-extras/git-rstatus.sh"
+  release   = !sh "$HOME/.lacosox_dotfiles/git-extras/git-release.sh"
+  setup     = !zsh "$HOME/.lacosox_dotfiles/git-extras/git-setup.sh"
+  summary   = !zsh "$HOME/.lacosox_dotfiles/git-extras/git-summary.sh"
+  delete-branch = !sh "$HOME/.lacosox_dotfiles/git-extras/git-delete-branch.sh"
+
+  ghpull = !sh "$HOME/.lacosox_dotfiles/git-extras/git-ghpull.sh"
+  dopull = !sh "$HOME/.lacosox_dotfiles/git-extras/git-ghpull.sh"
+  cleanup = !ruby "$HOME/.lacosox_dotfiles/git-extras/git-cleanup.rb"
+
+[color]
+  ui = true
+
+[core]
+  editor = nano
+
+[format]
+  pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+  graph = true
+
+[advice]
+  statusHints = false
+
+[log]
+  abbrevCommit = true
+
+[url "git@github.com:"]
+  insteadOf = "github://"
+  pushInsteadOf = "github://"
+  pushInsteadOf = "git://github.com/"
+
+[url "git@gist.github.com:"]
+  insteadOf = "gist://"
+  pushInsteadOf = "gist://"
+  pushInsteadOf = "git://gist.github.com/"
+
+[mergetool]
+  keepBackup = true

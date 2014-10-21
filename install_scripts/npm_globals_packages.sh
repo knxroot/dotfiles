@@ -1,0 +1,1 @@
+npm install --global internal-ip public-ip bower grunt
